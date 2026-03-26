@@ -8,7 +8,7 @@ int main() {
 	cout << "X에 양수 연산자 적용 : " << +x << endl;
 	cout << "X에 음수 연산자 적용 : " << -x << endl;
 	cout << "Y에 양수 연산자 적용 : " << +y << endl;
-	cout << "Y에 음수 연산자 적용 : " << -y;
+	cout << "Y에 음수 연산자 적용 : " << -y << endl;
 
 	return 0;
 }
