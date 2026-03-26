@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jeongbeomgwan/Desktop/GitHub/For_learning/C/Bagic/output/test'
+relocations:     []
+...
