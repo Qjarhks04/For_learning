@@ -39,8 +39,8 @@ printf("%d", *C);
 #include <stdio.h>
 
 int main() {
-    static char *C[] = {"a","b","c"};
-    printf("%s", C);
+    static char *C[] = {"aaa","bbb","ccc"};
+    printf("%s", *(C+1));
 }
 
 
