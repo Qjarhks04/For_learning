@@ -25,15 +25,22 @@ printf("%d", *C);
 
 */
 
+// #include <stdio.h>
+
+// int main() {
+//     int A = 10, B;
+//     int *C = &B;
+
+//     B = A--;
+//     B += 20;
+//     printf("%d", *C);
+// }
+
 #include <stdio.h>
 
 int main() {
-    int A = 10, B;
-    int *C = &B;
-
-    B = A--;
-    B += 20;
-    printf("%d", *C);
+    static char *C[] = {"a","b","c"};
+    printf("%s", C);
 }
 
 
