@@ -1,14 +1,13 @@
 import discord
 
 #bot의 토큰값을 변수에 넣어주었다 봇을 실행시키기 위해 반드시 필요한 봇의 고유번호이다
-Token = 'MTE3MzkyNzYyODcyNjYxNjA5NQ.GAkkUX.OjW8tMbsQ0xVeg-5FvoEv_-uWokH7iL8P5GM4M'
+Token = ''
 #openai를 사용하기 위해 가져온 api키 값 입니다
-# OPENAI_API_KEY = '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'
-OPENAI_API_KEY = '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'
+OPENAI_API_KEY = ''
 #openai에서 사용하기 위해 가져온 서버 아이디입니다
-SERVER_IDS = [1173927986362335263]
+SERVER_IDS = []
 #bot이 메세지를 보낼 채팅방의 고유아이디값이다
-CHANNEL_ID = 1173927986362335266
+CHANNEL_ID = 
 
 
 
