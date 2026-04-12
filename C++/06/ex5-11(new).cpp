@@ -26,7 +26,7 @@ int main() {
         cout << "    ";
     }
     for(int j = 1; j <= month; j++) {
-        cout << setw(3) << j;
+        cout << setw(4) << j;
         col++;
         if(col > 6) {
             cout << endl;
