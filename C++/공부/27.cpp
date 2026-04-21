@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+/* int main() {
 
     int num, sum;
     num = sum = 0;
@@ -14,7 +14,7 @@ int main() {
 
     cout << "총 합 : " << sum << endl;
     return 0;
-} 
+}  */
 
 /* int main() {
 
@@ -32,3 +32,16 @@ int main() {
     cout << "총 합 : " << sum << endl;
     return 0;
 } */
+
+int main() {
+    int sum, num;
+    num = sum = 0;
+
+    do {
+        sum += num;
+        cout << "입력 : ";
+    } while(cin >> num);
+
+    cout << sum;
+    return 0;
+}
