@@ -28,8 +28,6 @@ int main() {
 		col++;
 	}
 
-	
-
 	for (day = 1; day <= daysinMonth; day++) {
 		cout << setw(4) << day;
 		col++;
