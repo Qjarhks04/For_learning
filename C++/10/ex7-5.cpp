@@ -41,7 +41,7 @@ Rectangle::Rectangle(const Rectangle& rect)
 }
 Rectangle :: ~Rectangle() {
     cout << count << endl;
-    count++;
+    count--;
 }
 
 int Rectangle::getCount() {
