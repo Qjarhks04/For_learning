@@ -61,7 +61,5 @@ int main() {
     cout << "Area : " << rect3.getArea() << endl;
     cout << "Perimeter : " << rect3.getPerimeter() << endl;
 
-
-
     return 0;
 }
