@@ -43,6 +43,7 @@ void lottery(int n, int lotto[]) {
     }
 }
 
+//내 코드
 void lotto_check(int lotto[]) {
     BubbleSort(lotto);
 
@@ -54,6 +55,21 @@ void lotto_check(int lotto[]) {
         }
     }
 }
+
+//교수님 코드
+/*void lotto_check(int lotto[]) {
+    int i, j;
+    for(i = 0; i < SIZE; i++) {
+        for(j = 0; j < i; j++) {
+            if(lotto[i] == lotto[j]) {
+                lotto[i] = rand() % 45 + 1;
+                i--;
+                break;
+            }
+        }
+    }
+    BubbleSort(lotto);
+}*/
 
 void BubbleSort(int n[]) {
     int i, j, temp;
