@@ -1,21 +1,25 @@
 #include <iostream>
+#include <iomanip>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
-void print(int(*)[4], int);
-
 int main() {
-    int matrix[3][4] = { {10, 11, 12, 13},
-                                    {20, 21, 22, 23},
-                                        {31,32,33,34}};
-    print(matrix, 3);
-    return 0;
-}
+    int i, select, count;
+    srand(time(0));
+    do {
+        cout << "로또 게임을 시작합니다.\n";
+        cout << "몇 게임을 할까요? : ";
+        cin >> select;
 
-void print(int(*m)[4], int rows) {
-    for(int i = 0; i < rows; i++) {
-        for(int j = 0; j < 4; j++) {
-            cout << m[i][j] << "   ";
+        count = 0;
+        while(count < select) {
+            for(i = 0; i < 6; i++) {
+                cout << setw(3) << rand() % 45 + 1;
+                count++;
+            }
+            cout << endl;
         }
-        cout << endl;
-    }
+    } while(select != 0 && select < 0);
+    return 0;
 }
