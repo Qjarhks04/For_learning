@@ -1,42 +1,37 @@
 #include <iostream>
-#include <limits>
+#include <fstream>
+#include <iomanip>
 using namespace std;
-int getSize();
-void process(int size);
 
 int main() {
-    int size;
+    const int CAPACITY = 10;
+    int frequency[CAPACITY] = {0};
+    ifstream inputFile;
+    int data;
+    int size = 0;
 
-    size = getSize();
-    process(size);
-
-    return 0;
-}
-
-int getSize() {
-    int size;
-    cout << " 최대값, 최소값 찾기!\n";
-
-    do {
-        cout << "입력할 정수 개수(양수) : ";
-        cin >> size;
-    } while(size <= 0);
-
-    return size;
-}
-
-void process(int size) {
-    int number, smallest, largest;
-    smallest = numeric_limits <int> ::max();
-    largest = numeric_limits <int> :: min();
-
-    for(int i = 0; i < size; i++) {
-        cout << "정수 입력 : ";
-        cin >> number;
-
-        smallest = smallest < number ? smallest : number;
-        largest = largest > number ? largest : number;
+    inputFile.open("/Users/jeongbeomgwan/Desktop/GitHub/For_learning/C++/공부/integerFile.dat");
+    if(!inputFile) {
+        cout << "숫자 파일을 열 수 없습니다." << endl;
+        cout << "프로그램을 중단합니다.";
+        return 0;
     }
-    cout << "최소값 : " << smallest << endl;
-    cout << "최대값 : " << largest << endl;
+
+    while(inputFile >> data) {
+        if(data >= 0 || data <= 9) {
+            size++;
+            frequency[data]++;
+        }
+    }
+    inputFile.close();
+    cout << "파일 안에 " << size << "개의 유효한 데이터가 있습니다." << endl;
+
+    for(int i = 0; i < CAPACITY; i++) {
+        cout << setw(3) << i << " ";
+        for(int j = 0; j < frequency[i]; j++) {
+            cout << "*";
+        }
+        cout << setw(2) << frequency[i] << endl;
+    }
+    return 0;
 }
