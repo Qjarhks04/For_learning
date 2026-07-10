@@ -1,14 +1,12 @@
-#함수로 스왑
-def swap(a, b):
-    return b, a
+if 4 in [1, 2, 3, 4]: print("yes")
+else: print("no")
 
-a, b = 10, 20
-print("스왑전 : ", a, b)
-print("스왑후 : ", swap(a, b))
+a, b, c = 0, 21, 5
 
-#더 간편한 스왑(파이썬)
+for i in range(a, b, c):
+    print(i)
 
-c, d = 50, 100
-print("스왑 전 : ", c, d)
-d, c = c, d
-print("스왑 후 : ", c, d)
+d = 0
+while d < 5:
+    print(d) 
+    d += 1
