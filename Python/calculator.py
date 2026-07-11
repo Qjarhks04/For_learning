@@ -31,6 +31,7 @@ def div(num1, num2):
         return "0으로 나눌 수 없음"
     return num1 / num2
 
+
 if __name__ == "__main__":
     main()
     
