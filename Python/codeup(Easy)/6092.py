@@ -1,0 +1,15 @@
+num = int(input())
+a = input().split()
+d = []
+
+for i in range(num):
+    a[i] = int(a[i])
+
+for i in range(24):
+    d.append(0)
+
+for i in range(num):
+    d[a[i]] += 1
+
+for i in range(1, 24):
+    print(d[i], end = ' ')
