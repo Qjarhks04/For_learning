@@ -1,0 +1,150 @@
+1. 세미콜론
+세미콜론(;)
+붙여도 되고 붙이지 않아도 됨. 붙이지 않으면 자동으로 붙여줌. 하지만 붙이는 것이 좋음.
+<!-- <div id="output"></div>  이런 식으로 div를 닫지 않으면 자동으로 닫아줌. 하지만 닫는 것이 좋음.
+<input id = "name" /> -->
+//document.getElementById("output").innerText = 'Hello'; 
+//document.getElementById("name").value = 'Hello'
+//document.getElementById("output").innerText = document.getElementById("name").value 할시 output에 name의 value값이 들어감
+//input만 .value를 쓸 수 있음. 나머지 div등등은 .innerText를 써야함
+
+'문자열' , "문자열" , `문자열` 3가지 다 가능함. 하지만 문자열 안에 ' 나 "가 들어가면 안됨. 
+줄바꿈 문자는 \n 
+
+
+숫자 이진수 0b, 8진수 0o, 16진수 0x 
+parseInt , Number는 문자를 정수로 바꿔줌. parseFloat는 문자를 소수점까지 포함한 숫자로 바꿔줌. parseInt('3.14') = 3, parseFloat('3.14') = 3.14
+prompt는 입력창을 띄워줌. prompt('문자열') 이렇게 쓰면 입력창에 문자열이 뜨고 입력한 값이 반환됨.
+
+<!-- <input id="number1"/>
+    <b>-</b>
+    <input id="number2"/>
+    <button id="submit">=</button>
+    <input id = "result"/>
+<script>
+    document.getElementById("submit").addEventListener("click", ()=>{
+       let num1 = (document.getElementById('number1').value);
+       let num2 = (document.getElementById('number2').value);
+       document.getElementById('result').value = num1 - num2; // +는 문자열 더 할 때도 사용하지만 - 는 숫자 계산에만 사용하기 때문에 자동 형변환 된다.
+    }); -->
+
+비교 연산자
+>, <, >= , <= , == , ===
+== : 값만 같은지 비교
+=== : 값, 자료형까지 같은지 비교
+
+문자열 비교 
+'a' < 'ab' //사전을 찾을 때 좀 더 뒤에 있는 것이 크다 
+
+실수하기 좋은 것
+"2" < "10" = false //숫자는 앞 숫자로 비교한다 그러기 때문에 "2" > "10"이 true다
+
+논리식 && 값 // 논리식이 true 이면 값이 된다
+console.log((100>5) && 'Hello');
+출력값: true
+
+논리식 || 값 // 논리식이 false면 값이 나온다
+console.log((100 < 5) || 'hello');
+출력값 : true
+
+undefined 
+빈 값
+
+let a; //a는 값이 없기 때문에 undefined라는 값을 가지고 있다">
+let c= a || 100; // 출력값 100 
+
+if , 중첩if문  
+
+switch 케이스문
+break가 없으면 아래까지 다 출력된다
+등급제 A, b, c 인데 break가 문장 사이에 없으면 bc 이런식으로
+
+for문, while문
+for(let i = 0; i < 30; i = i+4){
+    sum += i;
+}
+
+let sum = 0
+let i = 0;
+while(i< 30){
+    sum += i;
+    i = i + 4;
+}
+
+let i = 0;
+
+
+배열
+
+const arr = [1,2,3,4,5,6];
+arr.pop(); 
+console.log(arr); [1,2,3,4,5]
+
+arr.push('a');
+console.log(arr); [1,2,3,4,5,6'a']
+
+arr.splice(인덱스번호, 갯수, 값1, 값2, 값3);
+arr.splice(2, 2);
+consoloe.log(arr); [1,2,5,6]
+
+arr.splice(2, 2,'a','b');
+console.log(arr); [1,2,'a','b',5,6]
+
+arr.slice(시작인덱스, 끝인덱스+1);
+arr.slice(2, 5)
+console.log(arr); [1,2,3,4,5,6] 으로 나온다 slice는 arr의 값을 바꾸지 않는다
+consloe.log(arr.slice(2,5)) 하면 [3,4,5]  
+
+const arr = [1,2,3,4,5,3];
+console.log(arr.indexOf(3));  2
+
+console.log(arr.lastindexOf(3));    5
+
+const arr = [1,2,3,4];
+
+arr.concat(5,6,7); 
+console.log(arr);    1,2,3,4
+
+console.log(arr.concat(5,6,7));         1,2,3,4,5,6,7
+
+const target = ['가', '나', '다', '라', '마'];
+console.log(target.slice(1,4));  나 다 라
+const copy = target.slice(0,3).concat('바',target.slice(3+1));   
+console.log(copy);        가 나 다 바 마 
+
+join()
+
+const target = ['가', '나', '다', '라','마']
+console.log(target.join(',')); 가,나,다,라,마
+
+
+split()
+const str = '수박, 참외 , 사과, 복숭아';
+console.log(str.split(','));
+ ['수박', ' 참외 ', ' 사과', ' 복숭아']
+
+let ang = '가#나#다#라#마';
+console.log(ang.split('#'));   
+['가', '나', '다', '라', '마']
+
+target()
+
+const target1 = ['가', ['나', '다'], '라', ['마', ['바','사']]];
+console.log(target1.flat());
+['가', '나', '다', '라', '마',['바','사']]
+
+const arr = new Array(10);
+arr.fill(0);
+console.log(arr);
+0 0 0 0 0 0 0 0 0 0 
+
+const a = ['가', '나', '다', '나'];
+const s = new Set(a);
+console.log(s);
+
+console.log(s.size);
+const b = Array.from(s);
+console.log(b); 
+
+시험 실행한 결과 나올 수도 있고
+빈칸에 코드를 써서 완성해라 나올 수도 있고
