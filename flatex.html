@@ -1,0 +1,21 @@
+# js 중첩배열 및 평탄화코드
+
+<input id="num1"><div id="output1">중첩배열 출력</div><div id="output2">평탄화 출력</div>
+<button id="submit">제출</button>
+
+<script>
+    document.getElementById('submit').addEventListener("click", ()=> {
+        let num1 = Number(document.getElementById("num1").value);
+        if(num1 > 0) {
+            let arr = [num1];
+            for (let i = num1 - 1; i >= 1; i--) {
+                arr = [i, arr];
+            }
+            document.getElementById("output1").innerText = JSON.stringify(arr);
+            const flat_Array = arr.flat();
+            document.getElementById("output2").innerText = JSON.stringify(flat_Array);
+        } else {
+            document.getElementById("output").innerText = "0보다 큰 값 입력";
+        }
+    });
+</script>
